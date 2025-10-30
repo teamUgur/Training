@@ -50,3 +50,11 @@ const favouriteFilm = {
 const {title, year, genre, star, director} = favouriteFilm // instead of using different variables with a lot of const
 console.log(`It is about ${title}, ${year}, ${genre}, ${star}, ${director}`)
 
+// setTimeout
+
+function displayLight(light) {
+    console.log(light)
+}
+
+setTimeout(displayLight, 3000, "🟢") // will be output after 3 seconds
+displayLight("🔴") // immediately output
