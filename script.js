@@ -18,4 +18,35 @@ console.log(messageThree) // but for big conditions it is better to use if and e
 
 // SWITCH STATEMENTS
 
+function selectItem(item) {
+    //case id like item === 'coffee' and etc...
+    let price = 0
+    switch(item) {
+        case 'coffee':
+            price = 2
+            break
+        case 'salad':
+            price = 4
+            break
+        case 'lemon cake':
+            price = 3
+            break
+        default: // if didnt match any case
+            return `Sorry, we dont sell ${item}`
+    }
+    return `You selected ${item}. That will be ${price}$`
+}
+
+// Object Destructuring
+
+const favouriteFilm = {
+    title: "Top Gun",
+    year: "1986",
+    genre: "action",
+    star: "Tom Cruise",
+    director: "Tony Scott"
+}
+
+const {title, year, genre, star, director} = favouriteFilm // instead of using different variables with a lot of const
+console.log(`It is about ${title}, ${year}, ${genre}, ${star}, ${director}`)
 
