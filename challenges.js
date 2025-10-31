@@ -20,9 +20,43 @@ console.log(`It is about ${destination}, ${activity}, ${accommodation}, ${compan
 
 // setTimeout challenge
 
-function logAnswer(answer, points) {
-    console.log(`The answer is ${answer} of course. It gave you ${points} points`)
+// Question and ANSWER after 5 seconds if stop = cancell
+const startBtn = document.getElementById("start-btn").addEventListener("click", render)
+const stopBtn = document.getElementById("stop-btn").addEventListener("click", stopAsnwer)
+const text = document.getElementById("text")
+
+function render() {
+
+    text.innerHTML += `
+        What is the capital of Peru?
+    `
+
+    if (stopBtn) {
+        stopAsnwer()
+    } else {
+        logAnswer()
+    }
 }
 
-console.log("What is the capital of Peru?")
-setTimeout(logAnswer, 3000, 'Lima', 10)
+const questionTimer = setTimeout(function() { // Pay attention on this structure !!!
+    text.innerHTML += `
+        <p>
+            The answer is Lima of course. It gave you 10 points
+        </p>
+    `}, 5000)
+
+function stopAsnwer() { // setTimeout with button
+    clearTimeout(questionTimer) // clearTimeout - cancell button click, removes timer
+    text.innerHTML += `
+            <p>
+                Cancelling...
+            </p>
+        `
+}
+
+function logAnswer() {
+    return questionTimer
+}
+
+
+
