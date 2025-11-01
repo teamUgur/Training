@@ -93,3 +93,23 @@ Number()
 Array()
 Object()
 Boolean()
+
+// Increment
+
+let num = 0
+function getNextNum() {
+    return ++num
+}
+
+console.log(getNextNum()) // 1
+console.log(getNextNum()) // 2
+console.log(getNextNum()) // 3
+
+let numTwo = 0
+function getNextNumTwo() {
+    return numTwo++
+}
+
+console.log(getNextNumTwo()) // 0
+console.log(getNextNumTwo()) // 1
+console.log(getNextNumTwo()) // 2
