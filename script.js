@@ -66,6 +66,7 @@ displayLight("🔴") // immediately output
 // INBUILT - provide objects in various predetermined formats like Date objects, error objects and other for each data type
 // CUSTOM - we can design oursekves to produce objects for our own specific purposes
 
+// Date constructor
 const dateSnapshot = new Date() // inbuilt constructor always starts with upper-case letter (Date())
 console.log(dateSnapshot) // output: 2025-11-01T05:00:49.088Z
 console.log(dateSnapshot.toString()) // Sat Nov 01 2025 08:02:39 GMT+0300 (Moscow Standard Time)
@@ -74,4 +75,21 @@ console.log(typeof dateSnapshot) // object
 const newDateSnapshot = new Date()
 console.log(newDateSnapshot.getFullYear()) // 2025 - only year
 
+// Error constructor
+function checkUsername(username) {
+    if (username) {
+        console.log(username)
+    } else {
+        console.log(new Error('No username provided')) // without it, we will get undefined
+        throw new Error('No username provided') // after error - code will break
+    }
+}
 
+checkUsername()
+
+// We also have this constructors:
+String()
+Number()
+Array()
+Object()
+Boolean()
