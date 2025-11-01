@@ -58,3 +58,20 @@ function displayLight(light) {
 
 setTimeout(displayLight, 3000, "🟢") // will be output after 3 seconds
 displayLight("🔴") // immediately output
+
+// The Date() Constructor
+// Constructors give objects
+
+// TWO types of constructor
+// INBUILT - provide objects in various predetermined formats like Date objects, error objects and other for each data type
+// CUSTOM - we can design oursekves to produce objects for our own specific purposes
+
+const dateSnapshot = new Date() // inbuilt constructor always starts with upper-case letter (Date())
+console.log(dateSnapshot) // output: 2025-11-01T05:00:49.088Z
+console.log(dateSnapshot.toString()) // Sat Nov 01 2025 08:02:39 GMT+0300 (Moscow Standard Time)
+console.log(typeof dateSnapshot) // object
+
+const newDateSnapshot = new Date()
+console.log(newDateSnapshot.getFullYear()) // 2025 - only year
+
+
