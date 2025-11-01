@@ -113,3 +113,18 @@ function getNextNumTwo() {
 console.log(getNextNumTwo()) // 0
 console.log(getNextNumTwo()) // 1
 console.log(getNextNumTwo()) // 2
+
+// Numeric seperator and Bigint
+
+const tomsBankBalance = 9_843_283_293_488_270 // it is the same num type but easier to read
+console.log(tomsBankBalance) // 9843283293488270
+
+// tomsBankBalance it is the bitggest number, js cant output more, so:
+
+const brandonBankBalance = 9_843_283_293_488_270_457n
+console.log(brandonBankBalance)
+console.log (typeof brandonBankBalance)
+// with n = 9843283293488270457n, type = bigint
+// without n = 9843283293488271000, type = int
+
+const jognBankBalance = BigInt(9_843_283_293_488_270_457) // second way of making bigint
